@@ -21,7 +21,7 @@
 
         document.getElementById('create-button').addEventListener('click', () => {
 
-            blobService.createContainerIfNotExists('mycontainer',  (error, container) => {
+            blobService.createContainerIfNotExists('images',  (error, container) => {
                 if (error) {
                     // Handle create container error
                 } else {
@@ -36,7 +36,7 @@
 
             const file = document.getElementById('fileinput').files[0];
 
-            blobService.createBlockBlobFromBrowserFile('mycontainer', 
+            blobService.createBlockBlobFromBrowserFile('images', 
                                                         file.name, 
                                                         file, 
                                                         (error, result) => {
